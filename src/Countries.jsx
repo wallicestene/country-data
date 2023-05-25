@@ -3,7 +3,7 @@ import './Countries.css'; // Import the CSS file
 import {Link} from "react-router-dom"
 import SearchInput from './SearchInput';
 import Filter from './Filter';
-import { Fade } from 'react-reveal';
+// import { Fade } from 'react-reveal';
 
 const CountryData = () => {
 
@@ -41,14 +41,14 @@ const CountryData = () => {
     <div className="country-container">
       
       <div className="country-upper">
-        <Fade right>
+        {/* <Fade right> */}
         <SearchInput searchInput={getCountryByName}/>
         <Filter regionName={filterByRegion}/>
-        </Fade>
+        {/* </Fade> */}
       </div>
       
       {countries.length > 0 ? (
-      <Fade left>
+      // <Fade left>
         <div className="country-grid">
         {countries.map((country, index) => (
           <div  key={index} className="country-card">
@@ -66,7 +66,7 @@ const CountryData = () => {
           </div>
            ))}
            </div>
-           </Fade>  
+          // </Fade>  
       ) : (
         <p>Loading...</p>
       )}
